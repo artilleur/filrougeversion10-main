@@ -16,6 +16,7 @@ namespace App\Form;
 //             ->add('roles')
             ->add('password')
             ->add('nom')
+            ->add('prenom')
             ->add('adresse')
             ->add('cp')
             ->add('ville')

@@ -26,7 +26,14 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-            ])
+            ])->add('nom')
+            ->add('prenom')
+            ->add('adresse')
+            ->add('cp')
+            ->add('ville')
+            ->add('pays')
+            ->add('telephone')
+
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
@@ -41,6 +48,7 @@ class RegistrationFormType extends AbstractType
                         'minMessage' => 'Your password should be at least {{ limit }} characters',
                         // max length allowed by Symfony for security reasons
                         'max' => 4096,
+
                     ]),
                 ],
             ])
